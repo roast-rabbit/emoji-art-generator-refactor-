@@ -23,13 +23,13 @@ if (lastUsedLocal !== lang) {
 localStorage.setItem("lastUsedLocal", lang);
 
 async function getEmojiData() {
-  const emojiDataResponse = await fetch(`./${lang}/data.json`);
+  const emojiDataResponse = await fetch(`/emoji/emojiartgenerator/${lang}/data.json`);
   const emojiData = await emojiDataResponse.json();
   return emojiData;
 }
 
 async function getMessages() {
-  const messagesResponse = await fetch(`./${lang}/messages.json`);
+  const messagesResponse = await fetch(`/emoji/emojiartgenerator/${lang}/messages.json`);
   const messages = await messagesResponse.json();
   return messages;
 }
@@ -49,7 +49,7 @@ currentSelection.addEventListener("click", () => {
   if (!picker) {
     loading.classList.remove("hide");
 
-    import("picmo").then(async ({ createPicker }) => {
+    import("./picmo.js").then(async ({ createPicker }) => {
       // Create the picker
       const emojiData = await getEmojiData();
 
