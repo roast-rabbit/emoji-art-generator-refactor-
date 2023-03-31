@@ -10,10 +10,11 @@ let form = document.querySelector("#emojify-form");
 const expandImageToEmojiArtBtn = document.querySelector("#expand-image-to-emoji-art-btn");
 const formGroups = document.querySelector('.form-groups')
 
-const activeClassName = "p-ss bg_blue text_white border_none radius_1 w-100";
+const activeClassName = "p-ss bg_blue text_white border_none radius_1 w-100 mb_1";
 
-expandImageToEmojiArtBtn.addEventListener("click", function () {
-  this.className = "p-ss bg_blue text_white border_none radius_1 w-100";
+expandImageToEmojiArtBtn.addEventListener("click", function (e) {
+  e.preventDefault()
+  this.className = activeClassName;
   formGroups.classList.remove('hide')
   // this.classList.add(activeClassName);
 });

@@ -1,14 +1,11 @@
 {
-  "main.js": "auto/bundle8b52632e5f36696cbc31.js",
-  "vendors-node_modules_picmo_dist_index_js.bundljs": "auto/vendors-node_modules_picmo_dist_index_js.bundle8b52632e5f36696cbc31.js",
-  "vendors-node_modules_html2canvas_dist_html2canvas_js.bundljs": "auto/vendors-node_modules_html2canvas_dist_html2canvas_js.bundle8b52632e5f36696cbc31.js",
+  "main.js": "auto/bundle43d50b00d4689c285e53.js",
+  "741.bundljs": "auto/741.bundle43d50b00d4689c285e53.js",
+  "120.bundljs": "auto/120.bundle43d50b00d4689c285e53.js",
   "zh-cn/data.json": "auto/zh-cn/data.json",
   "dict-web.css": "auto/dict-web.css",
   "index.html": "auto/index.html",
   "zh-cn/messages.json": "auto/zh-cn/messages.json",
   "styles.css": "auto/styles.css",
-  "translate-loading.svg": "auto/translate-loading.svg",
-  "bundljs.map": "auto/bundle8b52632e5f36696cbc31.js.map",
-  "vendors-node_modules_picmo_dist_index_js.bundljs.map": "auto/vendors-node_modules_picmo_dist_index_js.bundle8b52632e5f36696cbc31.js.map",
-  "vendors-node_modules_html2canvas_dist_html2canvas_js.bundljs.map": "auto/vendors-node_modules_html2canvas_dist_html2canvas_js.bundle8b52632e5f36696cbc31.js.map"
+  "translate-loading.svg": "auto/translate-loading.svg"
 }
