@@ -153,7 +153,7 @@ const emojifyImage = function (e) {
   }
 
   btn.disabled = true;
-  btn.innerHTML = document.querySelector("#emojify").textContent + "...";
+  btn.innerHTML = document.querySelector("#emojify").textContent;
 
   // prevent the emojified output from being emojified again
   if (uploadFilename == imgUpload.files[0].name) {
