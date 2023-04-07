@@ -279,7 +279,7 @@ const emojifyImage = function (e) {
 
     renderBoardWithCurrentEmojiText();
     btn.disabled = false;
-    btn.innerHTML = "Emojify!";
+    btn.innerHTML = document.querySelector("#emojifyed").textContent;
   }, 500);
   e.preventDefault();
 };

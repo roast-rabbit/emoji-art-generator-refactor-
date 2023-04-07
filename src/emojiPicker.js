@@ -61,7 +61,7 @@ currentSelection.addEventListener("click", () => {
   if (!picker) {
     loading.classList.remove("hide");
 
-    import("picmo").then(async ({ createPicker }) => {
+    import("./picmo.js").then(async ({ createPicker }) => {
       // Create the picker
       const emojiData = await getEmojiData();
 
