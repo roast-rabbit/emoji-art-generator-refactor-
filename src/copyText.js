@@ -8,8 +8,8 @@ async function copyText(e) {
   const { clipboard } = navigator;
 
   await clipboard.writeText(currentText);
-  // $(".copyed").css("opacity", 1);
+  $(".copyed").css("opacity", 1);
   setTimeout(function () {
-    // $(".copyed").css("opacity", 0);
+    $(".copyed").css("opacity", 0);
   }, 1000);
 }
