@@ -8,14 +8,14 @@ let canvas = document.getElementById("emojify");
 let form = document.querySelector("#emojify-form");
 
 const expandImageToEmojiArtBtn = document.querySelector("#expand-image-to-emoji-art-btn");
-const formGroups = document.querySelector('.form-groups')
+const formGroups = document.querySelector(".form-groups");
 
 const activeClassName = "p-ss bg_blue text_white border_none radius_1 w-100 mb_1";
 
 expandImageToEmojiArtBtn.addEventListener("click", function (e) {
-  e.preventDefault()
+  e.preventDefault();
   this.className = activeClassName;
-  formGroups.classList.remove('hide')
+  formGroups.classList.remove("hide");
   // this.classList.add(activeClassName);
 });
 
@@ -122,6 +122,9 @@ const adjustCanvasSize = function () {
   W = canvas.width;
   H = canvas.height;
 };
+
+let uploaded = false;
+
 const handleImgUpload = function (e) {
   var reader = new FileReader();
 
@@ -131,11 +134,17 @@ const handleImgUpload = function (e) {
       adjustCanvasSize();
     };
     img.src = ev.target.result;
+    uploaded = true;
   };
   reader.readAsDataURL(e.target.files[0]);
 };
 const emojifyImage = function (e) {
   e.preventDefault();
+
+  if (uploaded === false) {
+    return;
+  }
+
   // force invalid input to default for emoji size
   if (emojiSize.value < +emojiSize.min || isNaN(emojiSize.value)) {
     emojiSize.value = +emojiSize.min;
@@ -144,7 +153,7 @@ const emojifyImage = function (e) {
   }
 
   btn.disabled = true;
-  btn.innerHTML = "Emojifying…";
+  btn.innerHTML = document.querySelector("#emojify").textContent + "...";
 
   // prevent the emojified output from being emojified again
   if (uploadFilename == imgUpload.files[0].name) {

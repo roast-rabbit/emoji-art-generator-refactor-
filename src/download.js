@@ -2,7 +2,6 @@ const toPicBtn = document.querySelector("#to-picture");
 const loading = document.querySelector("#to-picture .loading");
 
 async function getScreenShot(e) {
-  $(".downloading").removeClass("hide");
   e.preventDefault();
 
   document.querySelector(".picture")?.remove();
@@ -21,7 +20,6 @@ async function getScreenShot(e) {
     );
     link.click();
     loading.classList.add("hide");
-    $(".downloading").addClass("hide");
   });
 }
 toPicBtn.addEventListener("click", getScreenShot);
