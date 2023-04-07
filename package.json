@@ -17,7 +17,6 @@
     "compression-webpack-plugin": "^10.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
-    "fabric": "^5.3.0",
     "html-webpack-plugin": "^5.5.0",
     "javascript-obfuscator": "^4.0.2",
     "jsdom": "^21.1.1",

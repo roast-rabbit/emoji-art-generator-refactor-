@@ -22,11 +22,23 @@ if (lastUsedLocal !== lang) {
 
 localStorage.setItem("lastUsedLocal", lang);
 
+// Development:
+// './zh-cn/data.json'
+
+// Production:
+// /emoji/emojiartgenerator/${lang}/data.json
+
 async function getEmojiData() {
   const emojiDataResponse = await fetch(`/emoji/emojiartgenerator/${lang}/data.json`);
   const emojiData = await emojiDataResponse.json();
   return emojiData;
 }
+
+// Development:
+// './zh-cn/messages.json'
+
+// Production:
+// /emoji/emojiartgenerator/${lang}/messages.json
 
 async function getMessages() {
   const messagesResponse = await fetch(`/emoji/emojiartgenerator/${lang}/messages.json`);
@@ -59,7 +71,7 @@ currentSelection.addEventListener("click", () => {
         rootElement: sideToolSet,
         emojiData,
         messages,
-        i18n: "de",
+        i18n: lang,
       });
       loading.classList.add("hide");
       // The picker emits an event when an emoji is selected. Do with it as you will!
